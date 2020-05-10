@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.clear {
+  clear: both;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #3c3d46;
+}
+
+.navbar {
+  height: 72px;
+  width: 1200px;
+  margin: auto;
+  /* background-color: cadetblue;  */
+}
+
+.logo {
+  float: left;
+}
+.brand {
+  float: left;
+  margin-top: 17px;
+}
+
+.menu {
+  width: 500px;
+  margin-left: 162px;
+  float: left;
+  margin-left: 162px;
+}
+.menu > li {
+  float: left;
+  width: 80px;
+  margin-right: 20px;
+  color: #3c3d46;
+  text-align: center;
+  line-height: 72px;
+}
+.menu_item {
+  background-color: #5696ff;
+  color: #fefeff !important;
+  font-size: 18px;
+}
+
+.menu > li:hover {
+  background-color: #5696ff;
+  color: #fefeff !important;
+}
+
+.logo {
+  margin-top: 7px;
+  float: left;
+}
+
+.signin_signup {
+  float: right;
+}
+.signin_signup > li {
+  float: left;
+  text-align: center;
+  line-height: 72px;
+  color: #3c3d46;
+  font-size: 18px;
+}
+.sepbar {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.banner {
+  height: 30px;
+  padding-top: 570px;
+  /* 这个我不明白 */
+
+  background: url(photo/banner_t.jpg) no-repeat center;
+  margin-bottom: 70px;
+}
+.circle {
+  width: 54px;
+  height: 16px;
+
+  margin-left: 936px;
+}
+
+.circle_1 {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #fefefe;
+  float: left;
+}
+.circle_2 {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: #fefefe solid 2px;
+  float: right;
+  box-sizing: border-box;
+}
+.search {
+  /* 不用设置高，因为子级会撑开父级 
+  不设置宽，默认宽度和屏幕等宽 */
+  margin: auto;
+  width: 350px;
+  height: 40px;
+  position: relative;
+}
+
+.search_box {
+  height: 40px;
+  width: 340px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: #666666 1px solid;
+  outline: none;
+}
+.search_icon {
+  /* 同级不可以当作参照物relative  所以search——box是同级不可以，search是父级可以 */
+  position: absolute;
+  right: 13px;
+  top: 8px;
+}
+.location_voyage {
+  /* height: 80px; */
+  width: 330px;
+
+  margin: auto;
+  margin-top: 60px;
+}
+.location_title {
+  width: 330px;
+}
+.location_sujet {
+  font-size: 36px;
+  color: #5696ff;
+  float: left;
+  margin-left: 18px;
+  /* margin-bottom: 24px; */
+  /* 这里不能用 text_align:center 因为text-align center 是指块里的文字，相对于这个块做居中
+        而且这里加了float，这就属于浮动元素 ：浮动元素的宽--主动设定/以子级的宽为准
+        这里没有主动设定宽的值，而且它也没有子级，那么这个块的宽度就是文字本身的宽度
+        也就是说，让文字在与文字大小一致的块里居中，效果和文字本身位置重合。所以不能用
+    */
+}
+.line_1 {
+  background-color: #666666;
+  height: 6px;
+  width: 78px;
+  float: left;
+  margin-top: 21px;
+}
+.line_2 {
+  background-color: #666666;
+  height: 6px;
+  width: 78px;
+  float: right;
+  margin-top: 21px;
+}
+
+.location_phrase {
+  color: #666666;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 22px;
+}
+.area_list {
+  width: 1204px;
+  margin: auto;
+
+  /* height: 373px; */
+  margin-top: 56px;
+}
+.sichuan {
+  width: 118px;
+  height: 373px;
+  margin-right: 4px;
+  float: left;
+  background-image: url(photo/sichuan.jpg);
+  /* position: relative; */
+}
+.dali {
+  width: 118px;
+  height: 373px;
+  background-image: url(photo/dali.jpg);
+  margin-right: 4px;
+  float: left;
+}
+.denmark {
+  width: 594px;
+  height: 373px;
+  background-image: url(photo/denmark.jpg);
+  margin-right: 4px;
+  float: left;
+}
+.japan {
+  width: 118px;
+  height: 373px;
+  background-image: url(photo/japan.jpg);
+  margin-right: 4px;
+  float: left;
+}
+.italy {
+  width: 118px;
+  height: 373px;
+  background-image: url(photo/italy.jpg);
+  margin-right: 4px;
+  float: left;
+}
+.france {
+  width: 118px;
+  height: 373px;
+  background-image: url(photo/france.jpg);
+  float: left;
+}
+/* 这里使用两种不同的方式来写上下排列的文字：
+    1.<br>换行  
+    2.给文字块设定的宽度小于文字本身的宽度，这样文字会被挤出块，上下排列
+    line-height可以设置上下文字的距离
+*/
+.shadow_sichuan {
+  height: 302px;
+  width: 74px;
+  background-color: rgba(33, 33, 33, 0.5);
+  line-height: 30px;
+  font-size: 28px;
+  color: #fdfdfd;
+  padding-top: 71px;
+  padding-left: 44px;
+}
+.shadow_dali {
+  width: 118px;
+  height: 302px;
+  padding-top: 71px;
+  background-color: rgba(33, 33, 33, 0.5);
+  font-size: 28px;
+  color: #fdfdfd;
+}
+.dl {
+  width: 28px;
+  line-height: 30px;
+  margin-left: 30px;
+}
+.shadow_denmark {
+  width: 564px;
+  height: 302px;
+  background-color: rgba(33, 33, 33, 0.5);
+  font-size: 28px;
+  color: #fdfdfd;
+  line-height: 30px;
+  padding-top: 71px;
+  padding-left: 30px;
+}
+.shadow_japan {
+  width: 118px;
+  height: 302px;
+  background-color: rgba(33, 33, 33, 0.5);
+  padding-top: 71px;
+}
+.rb {
+  width: 28px;
+  font-size: 28px;
+  color: #fdfdfd;
+  margin-left: 30px;
+  line-height: 30px;
+}
+.shadow_italy {
+  width: 88px;
+  height: 302px;
+  font-size: 28px;
+  color: #fdfdfd;
+  background-color: rgba(33, 33, 33, 0.5);
+  padding-top: 71px;
+  padding-left: 30px;
+
+  line-height: 30px;
+}
+.shadow_france {
+  width: 88px;
+  height: 302px;
+  padding-top: 71px;
+  padding-left: 30px;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+.fr {
+  font-size: 28px;
+  color: #fdfdfd;
+  width: 28px;
+  line-height: 30px;
+}
+
+.box {
+  /* height: 55px; */
+
+  margin-top: 70px;
+}
+.box_more {
+  /* height: 40px;
+    width: 123px; */
+  height: 55px;
+  width: 160px;
+  margin: auto;
+  border-radius: 5px;
+  border: #5696ff 2px solid;
+  color: #5696ff;
+  font-size: 26px;
+  text-align: center;
+  line-height: 55px;
+  margin-bottom: 107px;
+  /* padding-top: 15px;
+    padding-left: 37px; */
+}
+
+.info_title {
+  width: 330px;
+  margin: auto;
+}
+.info_sujet {
+  font-size: 36px;
+  color: #5696ff;
+  float: left;
+  margin-left: 18px;
+}
+.info_phrase {
+  width: 330px;
+  font-size: 22px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+  color: #666666;
+  margin-top: 22px;
+}
+.country_list {
+  height: 684px;
+  width: 1200px;
+  margin: auto;
+}
+.lf_list {
+  width: 892px;
+  height: 684px;
+  margin-right: 8px;
+  float: left;
+}
+.top_list {
+  margin-bottom: 8px;
+}
+.rg_list {
+  width: 300px;
+  height: 684px;
+
+  float: left;
+}
+.japan_info {
+  height: 472px;
+  width: 300px;
+  margin-bottom: 8px;
+  background-image: url(photo/japan01.jpg);
+  position: relative;
+}
+.japan_pub {
+  font-size: 22px;
+  color: #ffffff;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.inde_info {
+  width: 300px;
+  height: 204px;
+  background-image: url(photo/inde.jpg);
+  position: relative;
+}
+.inde_pub {
+  font-size: 22px;
+  color: #ffffff;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.denmark_info {
+  height: 307px;
+  width: 442px;
+  float: left;
+  margin-right: 8px;
+  position: relative;
+  background-image: url(photo/denmark01.jpg);
+}
+.denmark_pub {
+  font-size: 22px;
+  color: #ffffff;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.vietnam_info {
+  height: 287px;
+  width: 422px;
+  float: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-image: url(photo/vietnam.jpg);
+}
+.vietnam_pub {
+  font-size: 22px;
+  color: #ffffff;
+  position: absolute;
+  top: 28px;
+  left: 24px;
+}
+
+.shadow_vietnam {
+  height: 266px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: #ffffff 3px solid;
+  position: relative;
+}
+.vietnam_price {
+  width: 316px;
+
+  position: absolute;
+  left: 43px;
+  top: 87px;
+}
+.vietnam_line1 {
+  height: 4px;
+  width: 90px;
+  background-color: #ffffff;
+  float: left;
+  margin-top: 15px;
+}
+.vietnam_line2 {
+  height: 4px;
+  width: 90px;
+  background-color: #ffffff;
+  float: right;
+  margin-top: 15px;
+}
+.vietnam_nb {
+  font-size: 26px;
+  color: #ffffff;
+  margin-left: 29px;
+  float: left;
+}
+.bottom_list {
+  height: 369px;
+  width: 892px;
+}
+.thai_info {
+  height: 369px;
+  width: 363px;
+  background-image: url(photo/thai.jpg);
+  margin-right: 8px;
+  float: left;
+  position: relative;
+}
+.thai_pub {
+  font-size: 22px;
+  color: #ffffff;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.malaysia_info {
+  height: 369px;
+  width: 521px;
+  background: url(photo/malaysia.jpg);
+  float: left;
+  position: relative;
+}
+.malaysia_pub {
+  font-size: 22px;
+  color: #ffffff;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.voy_location {
+  height: 2560px;
+  width: 1200px;
+  background-color: blueviolet;
+  margin: auto;
+  margin-top: 250px;
+}
+.mexico {
+  width: 586px;
+  height: 746px;
+  padding-left: 614px;
+  background: url(photo/mexi.jpg);
+  
+  position: relative;
+}
+.mexico_up {
+  height: 441px;
+  width: 550px;
+  
+  position: absolute;
+  left: 614px;
+  bottom: 436px; 
+  border: #ffffff 42px solid;
+  background: url(photo/mexico.jpg) no-repeat center ;
+}
+.mexi_pre {
+  width: 1200px;
+  height: 686px;
+  background-color: rgb(172, 48, 48);
+} 
